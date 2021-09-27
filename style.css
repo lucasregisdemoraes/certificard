@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  --bg-color1: #041832;
+  --bg-color2: #3468A7;
+  --container-bg-color: #F7F7F7;
+
+  --bg-projects-color1: #499CFE;
+  --bg-projects-color2: #9CC8FC;
+
+  --header-text-color: #1C1C1C;
+  --text-color: #1C1C1C;
+  --button-color: #0E1D2F;
+
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: linear-gradient(236.85deg, var(--bg-color1) 27.26%, var(--bg-color2) 96.03%);
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  --bg-color1: #375B86;
+  --bg-color2: #6B87A9;
+  --container-bg-color: #333439;
+
+  --header-text-color: #F6F6F6;
+
+  --button-color: #F6F6F6;
+}
+
+.container {
+  background-color: var(--container-bg-color);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+  position: relative;
+  width: min(90vw, 1000px);
+  margin: 100px auto;
+  box-sizing: border-box;
+}
+
+/*   ========   HEADER   ====== */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+header h1,
+header h2 {
+  color: var(--header-text-color);
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+}
+
+header h2 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+
+}
+
+header img {
+  width: 160px;
+  height: 160px;
+  border-radius: 460px;
+  margin-right: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header button {
+  font-family: 'Roboto', sans-serif;
+  color: var(--button-color);
+  background-color: transparent;
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  border: 2px solid var(--button-color);
+  border-radius: 100px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/*   ========   MAIN   ====== */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.projects {
+  background: linear-gradient(230.65deg, #499CFE 27.49%, #9CC8FC 83.19%);
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+  border-radius: 20px;
+  padding: 40px 50px;
+  margin-top: 50px;
+}
+
+.projects h2 {
+  font-size: 36px;
+  line-height: 100%;
+  margin: 0 0 40px 0;
+}
+
+.projects li {
+  margin-bottom: 30px;
+}
+
+.projects li:last-of-type {
+  margin-bottom: 0;
+}
+
+.projects li a {
+  font-size: 24px;
+  color: var(--text-color);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.codepen-preview {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+@media(max-width: 717px) {
+  .container {
+    padding: 20px;
+  }
+
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-top: 30px;
+  }
+
+  header button {
+    top: 0px;
+    right: 0px;
+  }
+
+  .projects {
+    padding: 20px;
+  }
+}
